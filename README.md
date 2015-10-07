@@ -13,3 +13,10 @@ To use the docker image
             ipedrazas-coreos-etcd          UPDATE_COMPLETE
             ipedrazas-coreos-etcd-volumes  UPDATE_COMPLETE
             ipedrazas-infra                CREATE_COMPLETE
+
+
+Docker image is based on Linux Alpine 3.2 and it weghts 102.3 MB
+
+
+
+docker run -it --rm -v /home/ivan/.aws:/root/.aws  ipedrazas/stacks  stacks -p $AWS_PROFILE create -e ${ENV} -t cf-template.yaml ${ENV}-infra
